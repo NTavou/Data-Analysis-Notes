@@ -43,7 +43,7 @@ If you want to view or display the above code (don't use the word run, check [he
 1.) The XML Declaration:  
 ``<?xml version="1.0" encoding="utf-8"?>``  
 
-2.) A Document Type Declaration: 
+2.) A Document Type Declaration:  
 ``<!DOCTYPE report SYSTEM "http://sales.acme.corp/dtds/salesrep.dtd">``    
 
 which identifies the type of document (here, ‘report’) and says where the Document Type Description (DTD) is stored.
@@ -87,4 +87,4 @@ or otherwise (called **self-closing tag**):
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<person gender='female'>`    
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keep in mind that attributes cannot contain multiple values, tree structures and they are not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;easily expandable
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keep in mind that attributes cannot contain multiple values, tree structures and they are not easily expandable
