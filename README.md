@@ -50,7 +50,7 @@ The Prolog is followed by the **Document Instance** which has:
 
 ``<?xml version="1.0" standalone="yes"?>``  
 ``<conversation>`` *<-- The root element*  
-&nbsp;&nbsp;``<greeting>Hello, world!</greeting>``
+&nbsp;&nbsp;``<greeting>Hello, world!</greeting>``  
 &nbsp;&nbsp;``<response>Stop the planet, I want to get off!</response>``  
 ``</conversation>`` *<-- The root element* 
 
