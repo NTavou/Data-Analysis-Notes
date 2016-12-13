@@ -104,3 +104,13 @@ XPath can be used **to navigate through elements and attributes** in an **XML** 
 - XML documents are treated as trees of nodes. 
     
 - XPath **uses path expressions to select nodes** in an XML document. The node is selected by following a path or steps.
+
+| Expression    | 	Description  
+|-------------  |-------------
+| nodename| Selects all nodes with the name "nodename" | 
+| /| Selects from the root node
+| //	        | Selects nodes in the document from the current node that match the selection no matter where they are
+|.	           |Selects the current node
+|..	|Selects the parent of the current node
+|@	|Selects attributes
+ 
