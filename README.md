@@ -113,4 +113,66 @@ XPath can be used **to navigate through elements and attributes** in an **XML** 
 |.	           |Selects the current node
 |..	|Selects the parent of the current node
 |@	|Selects attributes
- 
+
+
+----------
+
+###Parsing XML in Python
+
+(Source: [https://www.python.org/](https://docs.python.org/2/library/xml.etree.elementtree.html))
+
+
+Using the following XML document as the sample data:
+
+    <?xml version="1.0"?>
+    <data>
+        <country name="Liechtenstein">
+            <rank>1</rank>
+            <year>2008</year>
+            <gdppc>141100</gdppc>
+            <neighbor name="Austria" direction="E"/>
+            <neighbor name="Switzerland" direction="W"/>
+      </country>
+      <country name="Singapore">
+            <rank>4</rank>
+            <year>2011</year>
+            <gdppc>59900</gdppc>
+            <neighbor name="Malaysia" direction="N"/>
+      </country>
+      <country name="Panama">
+            <rank>68</rank>
+            <year>2011</year>
+            <gdppc>13600</gdppc>
+            <neighbor name="Costa Rica" direction="W"/>
+            <neighbor name="Colombia" direction="E"/>
+      </country>
+    </data>
+
+Importing the data:
+
+    import xml.etree.ElementTree as ET
+    import pprint
+
+	tree = ET.parse('country_data.xml')
+    root = tree.getroot()
+
+As an Element, root has a tag and a dictionary of attributes:
+	
+	>>> print root.tag, root.attrib
+	data {}
+
+It also has children nodes over which we can iterate:
+	
+	>>> for child in root:
+	...     print child.tag, child.attrib
+	country {'name': 'Liechtenstein'}
+	country {'name': 'Singapore'}
+	country {'name': 'Panama'}
+    
+Children are nested, and we can access specific child nodes by index:	
+	
+	>>> root[0][0].text
+	'1'
+	
+	>>> root[0][1].text
+	'2008'
