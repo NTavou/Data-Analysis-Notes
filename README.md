@@ -169,10 +169,23 @@ It also has children nodes over which we can iterate:
 	country {'name': 'Singapore'}
 	country {'name': 'Panama'}
     
-Children are nested, and we can access specific child nodes by index:	
+Children are nested, and we can **access** specific child nodes by **index**:	
 	
 	>>> root[0][0].text
 	'1'
 	
 	>>> root[0][1].text
 	'2008'
+
+**Iterating** recursively **over all the sub-tree** below an Element (its children, their children, and so on):
+
+    >>> for neighbor in root.iter('neighbor'):
+    ... print neighbor.attrib
+    ...
+    {'name': 'Austria', 'direction': 'E'}
+    {'name': 'Switzerland', 'direction': 'W'}
+    {'name': 'Malaysia', 'direction': 'N'}
+    {'name': 'Costa Rica', 'direction': 'W'}
+    {'name': 'Colombia', 'direction': 'E'}
+
+In this case the element neighbor had two attributes: `name` and `direction`  
