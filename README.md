@@ -1,5 +1,5 @@
 # Data Analysis Notes
-## My Notes on XML
+## Parsing XML in Python
 
 ###Very short Intro on XML
 
@@ -117,12 +117,15 @@ XPath can be used **to navigate through elements and attributes** in an **XML** 
 
 ----------
 
-###Parsing XML in Python
+###XML parsing using Python
 
 (Source: [https://www.python.org/](https://docs.python.org/2/library/xml.etree.elementtree.html))
 
 
-Using the following XML document as the sample data:
+
+
+Using the following XML document as our sample data:
+
 
     <?xml version="1.0"?>
     <data>
@@ -156,7 +159,7 @@ Importing the data:
 	tree = ET.parse('country_data.xml')
     root = tree.getroot()
 
-As an Element, root has a tag and a dictionary of attributes:
+As an Element, root has a **tag** and **a dictionary of attributes**:
 	
 	>>> print root.tag, root.attrib
 	data {}
@@ -177,7 +180,35 @@ Children are nested, and we can **access** specific child nodes by **index**:
 	>>> root[0][1].text
 	'2008'
 
-**Iterating** recursively **over all the sub-tree** below an Element (its children, their children, and so on):
+
+**text** or **tail** are attributes that can be used to hold additional data associated with the element. Their values are usually strings but may be any application-specific object.
+
+We can use  **find(match)**  to find the first subelement matching match (match may be a tag name or path). Returns an element instance or None.
+
+
+    >>> root.find('./country/rank').text
+    '1'
+
+    >>> root.find('./country/rank').attrib['name']
+    'Liechtenstein'
+
+But what if we wanted to find all the matching rank elements in our specific example? We can use **findall(match)** which finds all matching subelements, by tag name or path. It **returns a list** containing all matching elements in document order. So we need to iterate over the list to achieve the desired result:
+
+    >>> my_findings = root.findall('./country/rank')
+    >>> for my_finding in my_findings:
+    ... print my_finding.text
+    1
+    4
+    68
+
+     >>> all_countries = root.findall('./country')
+     >>> for attribute in all_countries:
+    ...      print attribute.attrib['name']
+	Liechtenstein
+	Singapore
+	Panama
+
+We can **iterate** recursively **over all the sub-tree** below an Element (its children, their children, and so on):
 
     >>> for neighbor in root.iter('neighbor'):
     ... print neighbor.attrib
@@ -188,4 +219,6 @@ Children are nested, and we can **access** specific child nodes by **index**:
     {'name': 'Costa Rica', 'direction': 'W'}
     {'name': 'Colombia', 'direction': 'E'}
 
-In this case the element neighbor had two attributes: `name` and `direction`  
+In this case the element neighbor had two attributes: `name` and `direction`
+
+  
