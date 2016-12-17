@@ -208,6 +208,32 @@ But what if we wanted to find all the matching rank elements in our specific exa
 	Singapore
 	Panama
 
+It is possible to check all the Elements of our xml document along with their attributwes(if any) by using the **iterparse** function:
+
+    >>> for event,element in ET.iterparse('test.xml'):
+    ...     print element.tag, element.attrib
+    rank {}
+    year {}
+    gdppc {}
+    neighbor {'direction': 'E', 'name': 'Austria'}
+    neighbor {'direction': 'W', 'name': 'Switzerland'}
+    country {'name': 'Liechtenstein'}
+    rank {}
+    year {}
+    gdppc {}
+    neighbor {'direction': 'N', 'name': 'Malaysia'}
+    country {'name': 'Singapore'}
+    rank {}
+    year {}
+    gdppc {}
+    neighbor {'direction': 'W', 'name': 'Costa Rica'}
+    neighbor {'direction': 'E', 'name': 'Colombia'}
+    country {'name': 'Panama'}
+    data {}
+
+
+
+
 We can **iterate** recursively **over all the sub-tree** below an Element (its children, their children, and so on):
 
     >>> for neighbor in root.iter('neighbor'):
