@@ -208,7 +208,7 @@ But what if we wanted to find all the matching rank elements in our specific exa
 	Singapore
 	Panama
 
-It is possible to check all the Elements of our xml document along with their attributwes(if any) by using the **iterparse** function:
+It is possible to check all the Elements of our XML document along with its attributes (if any) by using the **iterparse** function:
 
     >>> for event,element in ET.iterparse('test.xml'):
     ...     print element.tag, element.attrib
