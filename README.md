@@ -247,4 +247,28 @@ We can **iterate** recursively **over all the sub-tree** below an Element (its c
 
 In this case the element neighbor had two attributes: `name` and `direction`
 
-  
+----------
+## Using Regular Expressions in Python
+
+(Source: [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter7/))
+
+All the **regex** functions in Python are in the re module:
+
+    >>> import re
+
+Then, create a **Regex object** with the re.compile() function i.e.(find a phone number in a string with the pattern: three numbers, a hyphen, three numbers, a hyphen, and four numbers):
+    
+    >>> phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+
+Pass the string you want to search into the Regex object’s **search() method**. This returns a Match object:
+
+    >>> mo = phoneNumRegex.search('My number is 415-555-4242.')
+
+The search() method will return None if the regex pattern is not found in the string. If the pattern is found, the search() method returns a **Match object**. In our case the pattern was found and a Match object was returned.
+
+Call the Match object’s **group() method** to return a string of the actual matched text:
+
+    >>> print('Phone number found: ' + mo.group())
+    ... Phone number found: 415-555-4242 
+ 
+ 
