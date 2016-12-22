@@ -1,4 +1,16 @@
 # Data Analysis Notes
+
+##Index
+
+1. [Parsing XML in Python](#Parsing-XML-in-Python)
+	- [Very short Intro on XML](#Very-short-Intro-on-XML)
+	- [Few words about XPath](#Few-words-about-XPath)
+	- [XML parsing using Python](#XML-parsing-using-Python)  
+
+
+2. [Using Regular Expressions in Python](#Using-Regular-Expressions-in-Python)
+
+
 ## Parsing XML in Python
 
 ###Very short Intro on XML
