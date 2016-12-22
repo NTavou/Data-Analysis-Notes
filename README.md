@@ -2,18 +2,18 @@
 
 ##Index
 
-1. [Parsing XML in Python](#Parsing-XML-in-Python)
-	- [Very short Intro on XML](#Very-short-Intro-on-XML)
-	- [Few words about XPath](#Few-words-about-XPath)
-	- [XML parsing using Python](#XML-parsing-using-Python)  
+1. [Parsing XML in Python](#parsing-xml-in-python)
+	- [Very short Intro on XML](#very-short-intro-on-xml)
+	- [Few words about XPath](#few-words-about-xpath)
+	- [XML parsing using Python](#)  
 
 
-2. [Using Regular Expressions in Python](#Using-Regular-Expressions-in-Python)
+2. [Using Regular Expressions in Python](#)
 
 
-## Parsing XML in Python
+## Parsing XML in Python <a name="parsing-xml-in-python"></a>
 
-###Very short Intro on XML
+###Very short Intro on XML <a name="very-short-intro-on-xml"></a>
 
 (Sources: [www.w3schools](http://www.w3schools.com/xml/default.asp), [xml.silmaril.ie/](http://xml.silmaril.ie/))
 
@@ -101,7 +101,7 @@ Keep in mind that attributes cannot contain multiple values, tree structures and
 
 ----------
 
-###Few words about XPath
+###Few words about XPath <a name="few-words-about-xpath"></a>
 
 (Source: [www.w3schools](http://www.w3schools.com/xml/xpath_intro.asp))
 
