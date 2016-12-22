@@ -5,15 +5,15 @@
 1. [Parsing XML in Python](#parsing-xml-in-python)
 	- [Very short Intro on XML](#very-short-intro-on-xml)
 	- [Few words about XPath](#few-words-about-xpath)
-	- [XML parsing using Python](#)  
+	- [XML parsing using Python](#xml-parsing-using-python)  
 
 
-2. [Using Regular Expressions in Python](#)
+2. [Using Regular Expressions in Python](#using-regular-expressions-in-python)
 
-
-## Parsing XML in Python <a name="parsing-xml-in-python"></a>
-
-###Very short Intro on XML <a name="very-short-intro-on-xml"></a>
+<a name="parsing-xml-in-python"></a>
+## Parsing XML in Python 
+<a name="very-short-intro-on-xml"></a>
+###Very short Intro on XML 
 
 (Sources: [www.w3schools](http://www.w3schools.com/xml/default.asp), [xml.silmaril.ie/](http://xml.silmaril.ie/))
 
@@ -100,8 +100,8 @@ or like this:
 Keep in mind that attributes cannot contain multiple values, tree structures and they are not easily expandable
 
 ----------
-
-###Few words about XPath <a name="few-words-about-xpath"></a>
+<a name="few-words-about-xpath"></a>
+###Few words about XPath 
 
 (Source: [www.w3schools](http://www.w3schools.com/xml/xpath_intro.asp))
 
@@ -128,7 +128,7 @@ XPath can be used **to navigate through elements and attributes** in an **XML** 
 
 
 ----------
-
+<a name="xml-parsing-using-python"></a>
 ###XML parsing using Python
 
 (Source: [https://www.python.org/](https://docs.python.org/2/library/xml.etree.elementtree.html))
@@ -260,6 +260,7 @@ We can **iterate** recursively **over all the sub-tree** below an Element (its c
 In this case the element neighbor had two attributes: `name` and `direction`
 
 ----------
+<a name="using-regular-expressions-in-python"></a>
 ## Using Regular Expressions in Python
 
 (Source: [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter7/))
