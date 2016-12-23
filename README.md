@@ -131,7 +131,7 @@ XPath can be used **to navigate through elements and attributes** in an **XML** 
 <a name="xml-parsing-using-python"></a>
 ###XML parsing using Python
 
-Source: [https://www.python.org/](https://docs.python.org/2/library/xml.etree.elementtree.html)
+Source: [xml.etree.ElementTree ](https://docs.python.org/2/library/xml.etree.elementtree.html)
 
 
 
@@ -264,10 +264,30 @@ In this case the element neighbor had two attributes: `name` and `direction`
 ## Using Regular Expressions in Python
 
 Sources:   
-[Regular Expression HOWTO](https://docs.python.org/2/howto/regex.html)
+[Learn Python the Hard Way](https://learnpythonthehardway.org/book/ex10.html),  
+[Regular Expression HOWTO](https://docs.python.org/2/howto/regex.html),  
 [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter7/),   
-[re — Regular expression operations](https://docs.python.org/2/library/re.html)
+[re — Regular expression operations](https://docs.python.org/2/library/re.html)  
 
+Before diving into regular expressions we need to have in mind the **escape sequences** that Python supports.
+
+|Escape    | 	What it does  
+|-------------  |-------------
+| \\| Backslash (\) 
+|\' | Single-quote (')
+|\" | Double-quote (")
+|\a	|ASCII bell (BEL)
+|\b	|ASCII backspace (BS)
+|\f	|ASCII formfeed (FF)
+|\n	|ASCII linefeed (LF)
+|\N{name}	|Character named name in the Unicode database (Unicode only)
+|\r	|Carriage Return (CR)
+|\t	|Horizontal Tab (TAB)
+|\uxxxx	|Character with 16-bit hex value xxxx (u'' string only)
+|\Uxxxxxxxx	|Character with 32-bit hex value xxxxxxxx (u'' string only)
+|\v	|ASCII vertical tab (VT)
+|\ooo|Character with octal value ooo
+|\xhh|Character with hex value hh  
 
 
 **Regular expressions** (called REs, or regexes, or regex patterns) are essentially a tiny, highly specialized programming language embedded inside Python and made available through the re module. Using this little language, you specify the rules for the set of possible strings that you want to match; this set might contain English sentences, or e-mail addresses, or TeX commands, or anything you like. You can then ask questions such as “Does this string match the pattern?”, or “Is there a match for the pattern anywhere in this string?”. You can also use REs to modify a string or to split it apart in various ways.
