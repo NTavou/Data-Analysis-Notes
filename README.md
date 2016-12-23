@@ -15,7 +15,7 @@
 <a name="very-short-intro-on-xml"></a>
 ###Very short Intro on XML 
 
-(Sources: [www.w3schools](http://www.w3schools.com/xml/default.asp), [xml.silmaril.ie/](http://xml.silmaril.ie/))
+Sources: [www.w3schools](http://www.w3schools.com/xml/default.asp), [xml.silmaril.ie/](http://xml.silmaril.ie/)
 
 [XML](https://en.wikipedia.org/wiki/XML) stands for eXtensible Markup Language
 
@@ -131,7 +131,7 @@ XPath can be used **to navigate through elements and attributes** in an **XML** 
 <a name="xml-parsing-using-python"></a>
 ###XML parsing using Python
 
-(Source: [https://www.python.org/](https://docs.python.org/2/library/xml.etree.elementtree.html))
+Source: [https://www.python.org/](https://docs.python.org/2/library/xml.etree.elementtree.html)
 
 
 
@@ -263,13 +263,20 @@ In this case the element neighbor had two attributes: `name` and `direction`
 <a name="using-regular-expressions-in-python"></a>
 ## Using Regular Expressions in Python
 
-(Source: [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter7/))
+Sources:   
+[Regular Expression HOWTO](https://docs.python.org/2/howto/regex.html)
+[Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter7/),   
+[re — Regular expression operations](https://docs.python.org/2/library/re.html)
 
-All the **regex** functions in Python are in the re module:
+
+
+**Regular expressions** (called REs, or regexes, or regex patterns) are essentially a tiny, highly specialized programming language embedded inside Python and made available through the re module. Using this little language, you specify the rules for the set of possible strings that you want to match; this set might contain English sentences, or e-mail addresses, or TeX commands, or anything you like. You can then ask questions such as “Does this string match the pattern?”, or “Is there a match for the pattern anywhere in this string?”. You can also use REs to modify a string or to split it apart in various ways.
+
+All the **regex** functions in Python are in the **re** module:
 
     >>> import re
 
-Then, create a **Regex object** with the re.compile() function i.e.(find a phone number in a string with the pattern: three numbers, a hyphen, three numbers, a hyphen, and four numbers):
+As a first step we need to create a **Regex object** with the re.compile() function i.e.(find a phone number in a string with the pattern: three numbers, a hyphen, three numbers, a hyphen, and four numbers):
     
     >>> phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
 
@@ -284,4 +291,7 @@ Call the Match object’s **group() method** to return a string of the actual ma
     >>> print('Phone number found: ' + mo.group())
     ... Phone number found: 415-555-4242 
  
- 
+Documentation about group:  
+group([group1, ...]) 
+
+Returns one or more subgroups of the match. If there is a single argument, the result is a single string; if there are multiple arguments, the result is a tuple with one item per argument. Without arguments, group1 defaults to zero (the whole match is returned)
