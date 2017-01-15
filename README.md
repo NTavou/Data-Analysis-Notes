@@ -36,23 +36,23 @@ An example of XML code:
        <heading>Reminder</heading> 
        <body>Hopefully, these notes will provide a short quick reference about XML in the future</body> 
     </note>
-`
-If you want to view or display the above code (don't use the word run, check [here](http://xml.silmaril.ie/execute.html) why) you can use for example [this online XML editor](http://xmlgrid.net/).   
+
+If you want to view or display the above code (don't use the word run, check [here](http://xml.silmaril.ie/execute.html) why) you can use for example [this online XML editor](http://xmlgrid.net/). 
 
 - XML documents form a [tree structure](http://www.w3schools.com/xml/xml_tree.asp) that starts at "the root" and branches to "the leaves". 
 - An XML document [starts with](http://xml.silmaril.ie/internals.html) an optional **Prolog**, which can have two (optional) parts:
   
 1.) The XML Declaration: 
  
-    <?xml version="1.0" encoding="utf-8"?>  
+    <?xml version="1.0" encoding="utf-8"?> 
 
 2.) A Document Type Declaration:
   
-    <!DOCTYPE report SYSTEM "http://sales.acme.corp/dtds/salesrep.dtd">  `  
+    <!DOCTYPE report SYSTEM "http://sales.acme.corp/dtds/salesrep.dtd"> 
 
 which identifies the type of document (here, ‘report’) and says where the Document Type Description (DTD) is stored.
 
-The Prolog is followed by the **Document Instance** which has:    
+The Prolog is followed by the **Document Instance** which has: 
 
 1.) A **root element**, which is the outermost (top level) element (start-tag plus end-tag) which encloses everything else. The root element is the **parent** of all other elements. An XML element is everything from (including) the element's start tag to (including) the element's end tag.
 
@@ -66,36 +66,36 @@ In the above lines of XML code ``<conversation>``  is the root element.
 
  2.) A structured mix of descriptive or prescriptive **elements** enclosing the **character data content** (text), and optionally any **attributes** (‘name="value"’ pairs) inside some start-tags. 
 
-  All elements can have sub elements (**child elements**):  
+  All elements can have sub elements (**child elements**): 
 
-    <root>
-      <child>
-        <subchild>.....</subchild>
-      </child>
-    </root>
+	    <root>
+	      <child>
+	        <subchild>.....</subchild>
+	      </child>
+	    </root>
+	
 
 
-
-An element with no content is said to be empty:  
+An element with no content is said to be empty: 
     
     <element></element>
   
-or otherwise (called **self-closing tag**):  
+or otherwise (called **self-closing tag**): 
 
     <element />
 
 - Element names are case-sensitive, must start with a letter or underscore, cannot start with the letters xml (or XML, or Xml, etc), can contain letters, digits, hyphens, underscores, and periods but they cannot contain spaces.
-- XML elements can be extended to carry more information.  
+- XML elements can be extended to carry more information. 
 
 - XML elements can have **attributes**, just like HTML. **Attributes** are designed to **contain data related to a specific element**. Attribute values must always be quoted. 
 
-Either single or double quotes can be used:  
+Either single or double quotes can be used: 
 
-    <person gender="female">   
+    <person gender="female"> 
 
-or like this:  
+or like this: 
 
-    <person gender='female'>    
+    <person gender='female'> 
 
 Keep in mind that attributes cannot contain multiple values, tree structures and they are not easily expandable
 
@@ -117,7 +117,7 @@ XPath can be used **to navigate through elements and attributes** in an **XML** 
     
 - XPath **uses path expressions to select nodes** in an XML document. The node is selected by following a path or steps.
 
-| Expression    | 	Description  
+| Expression    | 	Description 
 |-------------  |-------------
 | nodename| Selects all nodes with the name "nodename" | 
 | /| Selects from the root node
@@ -133,35 +133,33 @@ XPath can be used **to navigate through elements and attributes** in an **XML** 
 
 Source: [xml.etree.ElementTree ](https://docs.python.org/2/library/xml.etree.elementtree.html)
 
-
-
-
 Using the following XML document as our sample data:
 
+	<?xml version="1.0"?>
+	<data>
+	    <country name="Liechtenstein">
+	        <rank>1</rank>
+	        <year>2008</year>
+	        <gdppc>141100</gdppc>
+	        <neighbor name="Austria" direction="E"/>
+	        <neighbor name="Switzerland" direction="W"/>
+	    </country>
+	    <country name="Singapore">
+	        <rank>4</rank>
+	        <year>2011</year>
+	        <gdppc>59900</gdppc>
+	        <neighbor name="Malaysia" direction="N"/>
+	    </country>
+	    <country name="Panama">
+	        <rank>68</rank>
+	        <year>2011</year>
+	        <gdppc>13600</gdppc>
+	        <neighbor name="Costa Rica" direction="W"/>
+	        <neighbor name="Colombia" direction="E"/>
+	    </country>
+	</data>
 
-    <?xml version="1.0"?>
-    <data>
-        <country name="Liechtenstein">
-            <rank>1</rank>
-            <year>2008</year>
-            <gdppc>141100</gdppc>
-            <neighbor name="Austria" direction="E"/>
-            <neighbor name="Switzerland" direction="W"/>
-      </country>
-      <country name="Singapore">
-            <rank>4</rank>
-            <year>2011</year>
-            <gdppc>59900</gdppc>
-            <neighbor name="Malaysia" direction="N"/>
-      </country>
-      <country name="Panama">
-            <rank>68</rank>
-            <year>2011</year>
-            <gdppc>13600</gdppc>
-            <neighbor name="Costa Rica" direction="W"/>
-            <neighbor name="Colombia" direction="E"/>
-      </country>
-    </data>
+    
 
 Importing the data:
 
@@ -263,15 +261,15 @@ In this case the element neighbor had two attributes: `name` and `direction`
 <a name="using-regular-expressions-in-python"></a>
 ## Using Regular Expressions in Python
 
-Sources:   
-[Learn Python the Hard Way](https://learnpythonthehardway.org/book/ex10.html),  
-[Regular Expression HOWTO](https://docs.python.org/2/howto/regex.html),  
-[Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter7/),   
-[re — Regular expression operations](https://docs.python.org/2/library/re.html)  
+Sources:
+[Learn Python the Hard Way](https://learnpythonthehardway.org/book/ex10.html), 
+[Regular Expression HOWTO](https://docs.python.org/2/howto/regex.html), 
+[Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter7/), 
+[re — Regular expression operations](https://docs.python.org/2/library/re.html) 
 
 Before diving into regular expressions we need to have in mind the **escape sequences** that Python supports.
 
-|Escape    | 	What it does  
+|Escape    | 	What it does 
 |-------------  |-------------
 | \\| Backslash (\) 
 |\' | Single-quote (')
@@ -287,10 +285,10 @@ Before diving into regular expressions we need to have in mind the **escape sequ
 |\Uxxxxxxxx	|Character with 32-bit hex value xxxxxxxx (u'' string only)
 |\v	|ASCII vertical tab (VT)
 |\ooo|Character with octal value ooo
-|\xhh|Character with hex value hh  
+|\xhh|Character with hex value hh 
 
 
-**Regular expressions** (called REs, or regexes, or regex patterns) are essentially a tiny, highly specialized programming language embedded inside Python and made available through the re module. Using this little language, you specify the rules for the set of possible strings that you want to match; this set might contain English sentences, or e-mail addresses, or TeX commands, or anything you like. You can then ask questions such as “Does this string match the pattern?”, or “Is there a match for the pattern anywhere in this string?”. You can also use REs to modify a string or to split it apart in various ways.
+**Regular expressions** (called REs, or regexes, or regex patterns) are essentially a tiny, highly specialized programming language embedded inside Python and made available through the **re** module. Using this little language, you specify the rules for the set of possible strings that you want to match; this set might contain English sentences, or e-mail addresses, or TeX commands, or anything you like. You can then ask questions such as “Does this string match the pattern?”, or “Is there a match for the pattern anywhere in this string?”. You can also use REs to modify a string or to split it apart in various ways.
 
 All the **regex** functions in Python are in the **re** module:
 
@@ -311,7 +309,8 @@ Call the Match object’s **group() method** to return a string of the actual ma
     >>> print('Phone number found: ' + mo.group())
     ... Phone number found: 415-555-4242 
  
-Documentation about group:  
-group([group1, ...]) 
+Documentation about group: 
+
+	group([group1, ...]) 
 
 Returns one or more subgroups of the match. If there is a single argument, the result is a single string; if there are multiple arguments, the result is a tuple with one item per argument. Without arguments, group1 defaults to zero (the whole match is returned)
