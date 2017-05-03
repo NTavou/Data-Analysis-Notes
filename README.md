@@ -1,6 +1,6 @@
 # Data Analysis Notes
 
-##Index
+## Index
 
 1. [Parsing XML in Python](#parsing-xml-in-python)
 	- [Very short Intro on XML](#very-short-intro-on-xml)
@@ -13,7 +13,7 @@
 <a name="parsing-xml-in-python"></a>
 ## Parsing XML in Python 
 <a name="very-short-intro-on-xml"></a>
-###Very short Intro on XML 
+### Very short Intro on XML 
 
 Sources: [www.w3schools](http://www.w3schools.com/xml/default.asp), [xml.silmaril.ie/](http://xml.silmaril.ie/)
 
